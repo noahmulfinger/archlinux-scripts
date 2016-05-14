@@ -1,0 +1,12 @@
+#!/bin/bash
+
+source ~/bin/scrbrightstub
+
+set_brightness=$((current_brightness+incr))
+
+if [ "$set_brightness" -gt "$max_brightness" ]
+then
+       set_brightness=$max_brightness
+fi
+
+echo $set_brightness | tee ${bright_file_path}brightness

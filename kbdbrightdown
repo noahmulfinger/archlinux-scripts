@@ -1,0 +1,12 @@
+#!/bin/bash
+
+source ~/bin/kbdbrightstub
+
+set_brightness=$((current_brightness-incr))
+
+if [ "$set_brightness" -lt 0 ]
+then
+       set_brightness=0
+fi
+
+echo $set_brightness | tee ${bright_file_path}brightness

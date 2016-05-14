@@ -1,0 +1,6 @@
+#!/bin/bash
+
+bright_file_path=/sys/class/leds/smc\:\:kbd_backlight/
+current_brightness=`cat ${bright_file_path}brightness`
+max_brightness=`cat ${bright_file_path}max_brightness`
+incr=$((max_brightness / 10))

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+bright_file_path=/sys/class/backlight/acpi_video0/
+current_brightness=`cat ${bright_file_path}brightness`
+max_brightness=`cat ${bright_file_path}max_brightness`
+incr=$((max_brightness / 10))

@@ -1,0 +1,3 @@
+xrandr --newmode "2800x1800_60.00" 429.50 2800 3016 3320 3840  1800 1803 1813 1865 -hsync +vsync
+xrandr --addmode eDP1 2800x1800_60.00
+xrandr --output eDP1 --mode 2800x1800_60.00

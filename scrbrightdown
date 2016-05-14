@@ -1,0 +1,12 @@
+#!/bin/bash
+
+source ~/bin/scrbrightstub
+
+set_brightness=$((current_brightness-incr))
+
+if [ "$set_brightness" -lt 1 ]
+then
+       set_brightness=1
+fi
+
+echo $set_brightness | tee ${bright_file_path}brightness
