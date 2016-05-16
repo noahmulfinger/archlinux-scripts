@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/bin/scrbrightstub
+source ~/myconfig/scrbrightstub
 
 set_brightness=$((current_brightness-incr))
 

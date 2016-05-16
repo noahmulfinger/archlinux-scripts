@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/bin/kbdbrightstub
+source ~/myconfig/kbdbrightstub
 
 set_brightness=$((current_brightness-incr))
 

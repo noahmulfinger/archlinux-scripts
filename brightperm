@@ -1,8 +1,8 @@
 #!/bin/bash
 
-source ~/bin/scrbrightstub
+source ~/myconfig/scrbrightstub
 sudo chmod ugo+w ${bright_file_path}brightness
-source ~/bin/kbdbrightstub
+source ~/myconfig/kbdbrightstub
 sudo chmod ugo+w ${bright_file_path}brightness
 #sudo chmod ugo+w /sys/class/backlight/intel_backlight/brightness
 #sudo chmod ugo+w /sys/class/leds/smc\:\:kbd_backlight/brightness

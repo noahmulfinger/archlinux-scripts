@@ -33,7 +33,7 @@ font pango:monospace 8
 # automatically run screen res fix
 # 	-adds new lower-width res due to broken column of pixels on screen
 # 	-changes dpi to 168 to make text larger 
-exec ~/bin/fix-res
+exec ~/mycofig/fix-res
 
 # google chrome shortcut
 bindsym $mod+g exec google-chrome-stable
@@ -41,10 +41,10 @@ bindsym $mod+g exec google-chrome-stable
 # kill focused window (modified, originally $mod+Shift+q)
 bindsym $mod+q kill
 
-bindsym XF86MonBrightnessUp exec ~/bin/scrbrightup
-bindsym XF86MonBrightnessDown exec ~/bin/scrbrightdown
-bindsym XF86KbdBrightnessUp exec ~/bin/kbdbrightup
-bindsym XF86KbdBrightnessDown exec ~/bin/kbdbrightdown
+bindsym XF86MonBrightnessUp exec ~/myconfig/scrbrightup
+bindsym XF86MonBrightnessDown exec ~/myconfig/scrbrightdown
+bindsym XF86KbdBrightnessUp exec ~/myconfig/kbdbrightup
+bindsym XF86KbdBrightnessDown exec ~/myconfig/kbdbrightdown
 bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 5%+ && killall -USR1 i3status
 bindsym XF86AudioLowerVolume exec amixer -D pulse set Master 5%- && killall -USR1 i3status
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle && killall -USR1 i3status
