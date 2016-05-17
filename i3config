@@ -33,7 +33,7 @@ font pango:monospace 8
 # automatically run screen res fix
 # 	-adds new lower-width res due to broken column of pixels on screen
 # 	-changes dpi to 168 to make text larger 
-exec ~/mycofig/fix-res
+exec ~/myconfig/fix-res
 
 # google chrome shortcut
 bindsym $mod+g exec google-chrome-stable
