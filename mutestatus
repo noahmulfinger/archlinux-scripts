@@ -1,0 +1,8 @@
+#!/bin/bash
+
+output=`amixer -D pulse set Master 1+ toggle && killall -USR1 i3status`
+status=`echo $output | cut -f3 -d[ | cut -f1 -d] | awk '{print toupper($0)}'`
+
+/usr/bin/notify-send `echo VOLUME $status`
+
+

@@ -29,13 +29,18 @@ font pango:monospace 8
 ##
 ## Modified/added configuration 
 ##
-
-# automatically run screen res fix
+ 
+# Automatically run screen res fix
 # 	-adds new lower-width res due to broken column of pixels on screen
 # 	-changes dpi to 168 to make text larger 
 exec ~/myconfig/fix-res
 
-# google chrome shortcut
+# Automatically run touchpad fix
+#	-disables tap to click
+#	-enables palm detect for typing
+exec ~/myconfig/fix-touch
+
+# Google Chrome shortcut
 bindsym $mod+g exec google-chrome-stable
 
 # kill focused window (modified, originally $mod+Shift+q)
@@ -47,7 +52,7 @@ bindsym XF86KbdBrightnessUp exec ~/myconfig/kbdbrightup
 bindsym XF86KbdBrightnessDown exec ~/myconfig/kbdbrightdown
 bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 5%+ && killall -USR1 i3status
 bindsym XF86AudioLowerVolume exec amixer -D pulse set Master 5%- && killall -USR1 i3status
-bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle && killall -USR1 i3status
+bindsym XF86AudioMute exec ~/myconfig/mutestatus
 bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
 bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
